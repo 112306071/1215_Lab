@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+        background-color: #f4f4f4;
+    }
+    /* 添加样式表中的样式来定义按钮的外观 */
+    .red-button {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .sky-blue-button {
+      background-color: skyblue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+    <h1>Interactive Buttons</h1>
+  <!-- 在HTML中创建四个按钮，分别应用不同的样式类 -->
+  <button onclick=alert(first) class="red-button">1st button</button>
+  <button onclick=alert(second) class="sky-blue-button">2nd button</button>
+  <script>
+    var first;
+    var second;
+    first=window.prompt("1st input");
+    second=window.prompt("2nd input");
+    if(first > second){
+      document.body.style.backgroundColor='lightblue';
+      document.writeln("firstInput>secondInput");
+    } else if(second > first){
+      document.body.style.backgroundColor='orange';
+      document.writeln("secondInput>firstInput");
+    } else{
+      document.body.style.backgroundColor='lightyellow';
+      document.writeln("secondInput==firstInput");
+    }
+  </script>
+</body>
+</html>
